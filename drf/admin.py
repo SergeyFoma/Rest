@@ -7,6 +7,6 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Women)
 class WomenAdmin(admin.ModelAdmin):
-    list_display=['title','content','time_create','time_update','is_published','cat']
+    list_display=['id','title','content','time_create','time_update','is_published','cat']
 
 # Register your models here.
