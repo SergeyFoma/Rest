@@ -26,12 +26,12 @@ import io
 #     serializer=WomenSerializer(data=data)
 #     serializer.is_valid()
 #     print(serializer.validated_data)
-
+#------------------------------------------------------------
 # class WomenSerializer(serializers.ModelSerializer):
 #     class Meta:
 #         model=Women
 #         fields=('title', 'cat_id')
-
+#-----------------------------------------------------
 # class WomenSerializer(serializers.Serializer):
 #     title=serializers.CharField(max_length=255)
 #     content=serializers.CharField()
@@ -51,9 +51,9 @@ import io
 #         instance.cat_id = validated_data.get('cat_id', instance.cat_id)
 #         instance.save()
 #         return instance
-
+#------------------------------------------------------------
 class WomenSerializer(serializers.ModelSerializer):
     class Meta:
         model=Women
-        #fields=('title', 'content', 'cat')
-        fields='__all__'
+        fields=('id','title', 'content', 'cat')
+        #fields='__all__'
